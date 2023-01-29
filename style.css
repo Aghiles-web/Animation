@@ -1,0 +1,199 @@
+:root{
+    --distance: 75px;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    width: 650px;
+    height: 500px ;
+    background-color: rgb(227, 231, 231);
+}
+.le-e{
+    width: 50%;
+    height: 100%;
+    background-color: aliceblue;
+    position: relative;
+}
+.le-l{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: aliceblue;
+}
+.letter{
+    background-color: rgb(43, 41, 41);
+
+}
+.one{
+    background-color: rgb(31, 29, 29);
+    width: 100%;
+    height: var(--distance);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.two{
+    background-color: rgb(31, 29, 29);
+    width: var(--distance);
+    position: absolute;
+    height: calc(100% - 150px);
+    left: 0;
+    top: 75px;
+}
+.three{
+    background-color: rgb(31, 29, 29);
+    width: calc(100% - 75px);
+    position: absolute;
+    height: var(--distance);
+    left: 75px;
+    top: calc(50% - 37.5px);
+}
+
+.four{
+    background-color: rgb(31, 29, 29);
+    width: 100%;
+    position: absolute;
+    height: var(--distance);
+    left: 0;
+    bottom: 0;
+}
+.five{
+   
+    background-color: rgb(31, 29, 29);
+    height: 100%;
+    position: absolute;
+    width: var(--distance);
+    left: 25px;
+    top: 0;
+}
+.six{
+    background-color: rgb(31, 29, 29);
+    width: calc(100% - 25px);
+    position: absolute;
+    height: var(--distance);
+    left: 25px;
+    bottom: 0;
+}
+.le-l::before{
+    content: "";
+    width: calc(var(--distance) - 30px);
+    height: 50px;
+    position: absolute;
+    background-color: yellow;
+    right: 10px;
+    bottom: 12px;
+    z-index: 1;
+    animation-name: move-l;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+   
+
+.le-e::after{
+    content: "";
+    width: calc(var(--distance) - 30px);
+    height: 50px;
+    position: absolute;
+    background-color: yellow;
+    left: 10px;
+    top: 12px;
+    animation-name: move-e;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 7s;
+   
+}
+@keyframes move-e{
+    0%{
+        left: 260px;
+        top: 12px;   
+
+    }
+
+    11%{
+        left: 10px;
+        top: 12px;
+
+    }
+    22%{
+        left: 10px;
+        top: 225px;
+    }
+    33%{
+        left:260px;
+        top: 225px;
+       
+
+    }
+
+    44%{
+        left: 10px;
+        top: 225px;
+    }
+    55%{
+        left:10px;
+        top: 442px;
+        
+
+    }
+    66%{
+        left: 260px;
+        top: 442px;
+    }
+    77%{
+        left:10px;
+        top: 442px;
+       
+
+    }
+    88%{
+        left: 10px ;
+        top: 12px;
+    }
+    100%{
+        left: 260px;
+        top: 12px;   
+    }
+}
+@keyframes move-l{
+    0%{
+        right: 10px;
+        bottom: 12px;
+        background-color:  rgb(31, 29, 29);
+    }
+    25%{
+        right: 10px;
+        bottom: 12px;
+        background-color: yellow;
+    } 
+    50%{
+        right: 242px;
+        bottom: 12px;
+    }
+    75%{
+        right: 242px;
+        bottom: 440px;
+    }
+    93%{
+        right: 242px;
+        bottom: 440px;
+    }
+    100%{
+        right: 242px;
+        bottom: 440px;
+        background-color:  rgb(31, 29, 29);
+    }
+}
